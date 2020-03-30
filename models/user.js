@@ -11,5 +11,6 @@ const userSchema = mongoose.Schema(
 );
 
 const User = mongoose.model('user',userSchema);
-new User({account: '3180704102','password':'d123456',isLogin: false, role: 'student'}).save();
+//new User({account: '3180704101','password':'d123456',isLogin: false, role: 'student'}).save();
+//new User({account: '3180704102','password':'d123456',isLogin: false, role: 'teacher'}).save();
 module.exports = User;
