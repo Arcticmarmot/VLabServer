@@ -12,4 +12,49 @@ exports.succeed = (res,statusText,data)=>{
     });
     res.end(JSON.stringify(data));
 };
-
+exports.INIT_REPORT = [
+    {
+        name: 'Case 1',
+        isSubmit: false,
+        id: ''
+    },
+    {
+        name: 'Case 2',
+        isSubmit: false,
+        id: ''
+    },
+    {
+        name: 'Case 3',
+        isSubmit: false,
+        id: ''
+    },
+    {
+        name: 'Case 4',
+        isSubmit: false,
+        id: ''
+    },
+    {
+        name: 'Case 5',
+        isSubmit: false,
+        id: ''
+    },
+    {
+        name: 'Case 6',
+        isSubmit: false,
+        id: ''
+    },
+    {
+        name: 'Case 7',
+        isSubmit: false,
+        id: ''
+    },{
+        name: 'Case 8',
+        isSubmit: false,
+        id: ''
+    },
+    {
+        name: 'Case 9',
+        isSubmit: false,
+        id: ''
+    },
+];

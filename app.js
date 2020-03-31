@@ -7,6 +7,7 @@ const indexRouter = require('./routes/others/index');
 const loginRouter = require('./routes/login/login');
 const authRouter = require('./routes/login/auth');
 const logoutRouter = require('./routes/login/logout');
+const reportStateRouter = require('./routes/report/report-state');
 
 
 const app = express();
@@ -38,6 +39,7 @@ app.use('/', indexRouter);
 app.post('/login',loginRouter.login);
 app.get('/auth',authRouter.auth);
 app.get('/logout',logoutRouter.logout);
+app.get('/report_state', reportStateRouter.getReportState);
 
 app.use(function(err, req, res, next) {
   console.log(err);
