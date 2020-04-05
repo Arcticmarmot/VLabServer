@@ -2,9 +2,11 @@ const mongoose = require('../init/mongoose');
 
 const ReportSchema = mongoose.Schema(
     {
+        student: String,
+        name: String,
         checkMethod: String,
         patientName: String,
-        age: Int8Array,
+        age: String,
         gender: String,
         checkData: Date,
         checkFinding: String,

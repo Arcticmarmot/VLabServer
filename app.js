@@ -8,7 +8,8 @@ const loginRouter = require('./routes/login/login');
 const authRouter = require('./routes/login/auth');
 const logoutRouter = require('./routes/login/logout');
 const reportStateRouter = require('./routes/report/report-state');
-
+const mainInfoStateRouter = require('./routes/info/main-info')
+const reportRouter = require('./routes/report/report');
 
 const app = express();
 
@@ -40,6 +41,10 @@ app.post('/login',loginRouter.login);
 app.get('/auth',authRouter.auth);
 app.get('/logout',logoutRouter.logout);
 app.get('/report_state', reportStateRouter.getReportState);
+app.get('/main_info', mainInfoStateRouter.getMainInfo);
+app.get('/url', mainInfoStateRouter.getUrl);
+app.get('/key', mainInfoStateRouter.getKey);
+app.post('/report', reportRouter.postReport);
 
 app.use(function(err, req, res, next) {
   console.log(err);
