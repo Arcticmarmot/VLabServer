@@ -10,7 +10,7 @@ const logoutRouter = require('./routes/login/logout');
 const reportStateRouter = require('./routes/report/report-state');
 const mainInfoStateRouter = require('./routes/info/main-info')
 const reportRouter = require('./routes/report/report');
-
+const reportToCorrectRouter = require('./routes/report/report-to-correct')
 const app = express();
 
 // view engine setup
@@ -45,6 +45,8 @@ app.get('/main_info', mainInfoStateRouter.getMainInfo);
 app.get('/url', mainInfoStateRouter.getUrl);
 app.get('/key', mainInfoStateRouter.getKey);
 app.post('/report', reportRouter.postReport);
+app.get('/report_to_correct', reportToCorrectRouter.getReportToCorrect);
+app.post('/report_to_correct', reportToCorrectRouter.postCorrect);
 
 app.use(function(err, req, res, next) {
   console.log(err);

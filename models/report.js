@@ -11,6 +11,8 @@ const ReportSchema = mongoose.Schema(
         checkData: Date,
         checkFinding: String,
         conclusion: String,
+        score: String,
+        teacher: String,
     }
 );
 

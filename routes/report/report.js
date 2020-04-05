@@ -7,6 +7,8 @@ exports.postReport = (req,res,next)=>{
     verify(req,(err,decode)=>{
         if(err) return succeed(res,'authorize fail',{tip: 'Unknown error'});
         postData.student = decode.account;
+        postData.score = '';
+        postData.teacher = '';
         user.findOne({account: decode.account}).then(userData=>{
             let flag = false;
             userData.reports.forEach(rep=>{
