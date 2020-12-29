@@ -11,14 +11,59 @@ const userSchema = mongoose.Schema(
 );
 
 const User = mongoose.model('user',userSchema);
-// new User(
+/** new User(
 //     {
-//             account: '3180704102',
-//             password:'d123456',
-//             role: 'teacher',
-//             createdAt: new Date(),
-//             reports: INIT_REPORT,
-//     }).save();
+            account: '222',
+             password:'222',
+            role: 'teacher',
+             createdAt: new Date(),
+             reports: [
+        {
+                name: 'Case 1',
+                isSubmit: false,
+                id: ''
+        },
+        {
+                name: 'Case 2',
+                isSubmit: false,
+                id: ''
+        },
+        {
+                name: 'Case 3',
+                isSubmit: false,
+                id: ''
+        },
+        {
+                name: 'Case 4',
+                isSubmit: false,
+                id: ''
+        },
+        {
+                name: 'Case 5',
+                isSubmit: false,
+                id: ''
+        },
+        {
+                name: 'Case 6',
+                isSubmit: false,
+                id: ''
+        },
+        {
+                name: 'Case 7',
+                isSubmit: false,
+                id: ''
+        },{
+                name: 'Case 8',
+                isSubmit: false,
+                id: ''
+        },
+        {
+                name: 'Case 9',
+                isSubmit: false,
+                id: ''
+        },
+],
+   }).save();
 // new User(
 //     {
 //             account: '3180704101',
@@ -34,5 +79,5 @@ const User = mongoose.model('user',userSchema);
 //             role: 'student',
 //             createdAt: new Date(),
 //             reports: INIT_REPORT,
-//     }).save();
+//     }).save();*/
 module.exports = User;

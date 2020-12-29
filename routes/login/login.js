@@ -13,7 +13,7 @@ exports.login = (req,res,next)=>{
        let token = jwt.sign({account: data.account,role: data.role}, SECRET, {
            expiresIn: 60*60*24
        });
-       res.cookie('token',token,{path:'/',maxAge:1000*60*60*24, httpOnly:false});
+       res.cookie('token',token,{path:'/',maxAge:1000*60*60*24, httpOnly:false, sameSite: "none"});
        return succeed(res,'login succeed',{tip:'login succeed'});
     }).catch(err=>{
        return handleError(next,500,'login fail','Unknown error');
